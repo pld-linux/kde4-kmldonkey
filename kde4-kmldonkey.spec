@@ -6,7 +6,7 @@ Summary:	Frontend for MLDonkey designed for KDE desktop
 Summary(pl.UTF-8):	Interfejs do MLDonkey dla KDE.
 Name:		kde4-kmldonkey
 Version:	2.2.1
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		X11/Applications
 # Source0:	%{orgname}-20130301.tgz
@@ -69,7 +69,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/*.so
 %{_desktopdir}/kde4/*.desktop
 %{_iconsdir}/*/*/*/*
-%{_datadir}/apps/kmldonkey/icons/*/*/*/*
+%dir %{_datadir}/apps/kmldonkey
+%{_datadir}/apps/kmldonkey/icons
 %{_datadir}/apps/kmldonkey/kmldonkeyui.rc
 %{_datadir}/apps/kmldonkey/kmldonkey.notifyrc
 %{_datadir}/kde4/services/*.desktop
