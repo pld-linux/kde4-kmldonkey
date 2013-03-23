@@ -6,7 +6,7 @@ Summary:	KDE frontend for MLDonkey
 Summary(pl.UTF-8):	Interfejs do MLDonkey dla KDE.
 Name:		kde4-kmldonkey
 Version:	2.2.1
-Release:	0.3
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 # Source0:	%{orgname}-20130301.tgz
@@ -35,7 +35,7 @@ BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-KMLDonkey is a KDE  frontend for MLDonkey, a powerful P2P file sharing
+KMLDonkey is a KDE frontend for MLDonkey, a powerful P2P file sharing
 tool.
 
 %description -l pl.UTF-8
@@ -67,7 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kmldonkey
 %attr(755,root,root) %{_libdir}/liblibkmldonkey.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/liblibkmldonkey.so
 %attr(755,root,root) %ghost %{_libdir}/liblibkmldonkey.so.5
 %attr(755,root,root) %{_libdir}/kde4/plasma_applet_kmldonkey.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_engine_kmldonkey.so
@@ -78,3 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kmldonkey/kmldonkeyui.rc
 %{_datadir}/apps/kmldonkey/kmldonkey.notifyrc
 %{_datadir}/kde4/services/*.desktop
+
+# -devel
+# %attr(755,root,root) %ghost %{_libdir}/liblibkmldonkey.so
+# /*.h
